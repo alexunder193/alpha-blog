@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   #if I put this method here is accessible from controllers
   #if I put helper_method it's also a helper method which I moved from application_helper.rb
   def current_user
-    #memorization
+    #memoization
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
